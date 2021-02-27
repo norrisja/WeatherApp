@@ -26,7 +26,7 @@ class WeatherApp():
         self.master = Tk()
         WeatherApp(self.master)
         self.display_weather(zipcode)
-        
+
 
     def home_page(self):
         """ Launches the homepage that asks the user for their zipcode
@@ -40,7 +40,7 @@ class WeatherApp():
 
     def load_weather(self, weather):
         """
-        param weather, loads the weather page
+        param: weather dictionary, loads the weather page
         """
 
         temp = weather['temp']
@@ -67,7 +67,6 @@ class WeatherApp():
         # Store the image so it doesn't get swept up
         self.rendered_im = ImageTk.PhotoImage(raw_data)
         self.label7 = Label(self.master, image=self.rendered_im).grid(row=0, column=2, rowspan=3, columnspan=2)
-        #self.button = Button(master, text='Refresh', command=self.refresh_page).grid(row=3, column=0, columnspan=2)
         self.end_button = Button(self.master, text='End', command=self.master.destroy).grid(row=4, column=3)
 
 
